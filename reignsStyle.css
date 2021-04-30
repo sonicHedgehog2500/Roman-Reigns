@@ -1,0 +1,451 @@
+html, body {
+  font-family: calibri;
+  line-height: 30px;
+  text-align: justify;
+  scroll-behavior: smooth;
+}
+
+a, span, h1, h3, h4 {
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: normal;
+  color: black;
+}
+
+/*****Card Styling*****/
+.card img {
+  width: 100%;
+  height: 250px;
+}
+
+/*****Carousel Styling*****/
+.carousel .carousel-inner .carousel-item img {
+  width: 100%;
+  height: 350px;
+}
+
+.carousel .carousel-inner .carousel-item .carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel .carousel-inner .carousel-item .carousel-caption h3 {
+  color: white;
+}
+
+/*****Accordion Styling*****/
+#accordion .card-header .card-link {
+  width: 100%;
+  display: block;
+}
+
+#accordion .collapse .card-body .container-fluid .card {
+  margin: 10px 0px;
+}
+
+/*****Slider Styling*****/
+.slider {
+  display: block;
+}
+
+.slider .slider-container {
+  display: block;
+  white-space: nowrap;
+}
+
+.slider .slider-container a {
+  text-decoration: none;
+  margin: 5px 5px;
+}
+
+.slider .slider-container a .card {
+  text-align: center;
+}
+
+/*****Horizontal Slider Styling*****/
+.slider-horizontal {
+  overflow-x: scroll;
+}
+
+.slider-horizontal .slider-container a {
+  display: inline-block;
+}
+
+/*****Tab Content Styling*****/
+.tab-content {
+  display: none;
+}
+
+.tab-content .card-body .card-text {
+  text-align: justify;
+}
+
+.tab-content:target {
+  display: -ms-grid;
+  display: grid;
+}
+
+/*****Header Styling*****/
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 5px;
+}
+
+header #logo {
+  max-width: 80px;
+  max-height: 80px;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  margin: 5px 5px;
+}
+
+header #menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/*****Main Content Styling*****/
+main {
+  display: block;
+  overflow: auto;
+  min-height: 100%;
+}
+
+main .container-fluid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+}
+
+main .container-fluid .content-container {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 10px;
+}
+
+main .container-fluid #about-container .card {
+  display: -ms-grid;
+  display: grid;
+  text-align: justify;
+}
+
+main .container-fluid #news-controls-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .container-fluid #news-controls-container a {
+  color: blue;
+  text-decoration: none;
+}
+
+main .container-fluid #news-controls-container a:hover {
+  text-decoration: underline;
+}
+
+main .container-fluid .card-championship {
+  text-align: center;
+}
+
+main .container-fluid .card-achievement {
+  display: -ms-grid;
+  display: grid;
+}
+
+main .container-fluid .card-achievement .card-text {
+  text-align: justify;
+}
+
+/*****Footer Styling*****/
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer #social-media-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: inherit;
+  font-size: 1.2em;
+}
+
+/**********************************************************************************************************************************Responsive Layout**********/
+/*******************************************************************************************************************Mobile Layout***************/
+@media only screen and (min-width: 320px) {
+  /*****Card Styling*****/
+  .card {
+    text-align: center;
+  }
+  /*****Accordion Styling*****/
+  #accordion .card-header .card-link {
+    text-align: center;
+  }
+  /*****Section Title Styling*****/
+  .section-title {
+    text-align: center;
+  }
+  /*****Header Styling*****/
+  header {
+    height: 100px;
+  }
+  header #menu {
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    z-index: 1;
+    width: 100%;
+    background-color: black;
+  }
+  header #menu a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    color: white;
+    text-align: center;
+    margin: 0px 10px;
+  }
+  /*****Main Content Styling*****/
+  main {
+    padding-bottom: 70px;
+  }
+  main .container-fluid .content-container {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+  main .container-fluid #about-container .card {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+  main .container-fluid #news-controls-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .container-fluid .card-achievement {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+  main .container-fluid .tab-content-rivalry {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+  /*****Footer Styling*****/
+  footer {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    height: 100px;
+  }
+  footer #social-media-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer #social-media-container a {
+    margin: 0px 10px;
+  }
+}
+
+/*******************************************************************************************************************Tablet Layout***************/
+@media only screen and (min-width: 768px) {
+  /*****Card Styling*****/
+  .card {
+    text-align: center;
+  }
+  /*****Accordion Styling*****/
+  #accordion .card-header .card-link {
+    text-align: center;
+  }
+  /*****Section Title Styling*****/
+  .section-title {
+    text-align: center;
+  }
+  /*****Header Styling*****/
+  header {
+    height: 100px;
+  }
+  header #menu {
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    z-index: 1;
+    width: 100%;
+    background-color: black;
+  }
+  header #menu a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    color: white;
+    text-align: center;
+    margin: 0px 10px;
+  }
+  /*****Main Content Styling*****/
+  main {
+    padding-bottom: 70px;
+  }
+  main .container-fluid .content-container {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+  }
+  main .container-fluid #about-container .card {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+  main .container-fluid #news-controls-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .container-fluid .card-achievement {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+  main .container-fluid .tab-content-rivalry {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+  /*****Footer Styling*****/
+  footer {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    height: 100px;
+  }
+  footer #social-media-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer #social-media-container a {
+    margin: 0px 10px;
+  }
+}
+
+/*******************************************************************************************Laptop, Desktop & Large Screen Layout***************/
+@media only screen and (min-width: 992px) {
+  /*****Card Styling*****/
+  .card {
+    text-align: left;
+  }
+  /*****Accordion Styling*****/
+  #accordion :nth-child(odd) .card-link {
+    text-align: left;
+  }
+  #accordion :nth-child(even) .card-link {
+    text-align: right;
+  }
+  /*****Section Title Styling*****/
+  .section-title {
+    text-align: left;
+  }
+  /*****Header Styling*****/
+  header {
+    height: auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header #menu {
+    position: initial;
+    width: auto;
+    background-color: transparent;
+  }
+  header #menu a {
+    display: initial;
+    color: black;
+    margin: 0px 10px;
+  }
+  header #menu a i {
+    display: none;
+  }
+  /*****Main Content Styling*****/
+  main {
+    padding-bottom: 0px;
+  }
+  main .container-fluid .content-container {
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+  }
+  main .container-fluid #about-container .card {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+  }
+  main .container-fluid #about-container .card img {
+    height: 100%;
+  }
+  main .container-fluid #news-controls-container {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .container-fluid .card-achievement {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+  }
+  main .container-fluid .card-achievement img {
+    width: 500px;
+    height: 100%;
+  }
+  main .container-fluid .tab-content-rivalry {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+  }
+  main .container-fluid .tab-content-rivalry img {
+    width: 500px;
+    height: 100%;
+  }
+  /*****Footer Styling*****/
+  footer {
+    position: initial;
+    clear: both;
+  }
+  footer #social-media-container {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+/*# sourceMappingURL=reignsStyle.css.map */

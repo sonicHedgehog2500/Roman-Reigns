@@ -1,0 +1,477 @@
+html, body{
+	font-family: calibri;
+	line-height: 30px;
+	text-align: justify;
+	scroll-behavior: smooth;
+}
+
+a, span, h1, h3, h4{
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 2px;
+	font-weight: normal;
+	color: black;
+}
+
+/*****Card Styling*****/
+.card{ 
+	img{
+		width: 100%;
+		height: 250px;
+	}
+}
+
+/*****Carousel Styling*****/
+.carousel{
+	.carousel-inner{
+		.carousel-item{
+			img{
+				width: 100%;
+				height: 350px;
+			}
+
+			.carousel-caption{
+				background-color: rgba(0,0,0,0.5);
+
+				h3{
+					color: white;
+				}
+			}
+		}
+	}
+}
+
+/*****Accordion Styling*****/
+#accordion{
+	.card-header{
+		.card-link{
+			width: 100%;
+			display: block;
+		}
+	}
+
+	.collapse{
+		.card-body{
+			.container-fluid{
+				.card{
+					margin: 10px 0px;
+				}
+			}
+		}
+	}
+}
+
+/*****Slider Styling*****/
+.slider{
+	display: block;
+
+	.slider-container{
+		display: block;
+		white-space: nowrap;
+
+		a{
+			text-decoration: none;
+			margin: 5px 5px;
+
+			.card{
+				text-align: center;
+			}
+		}
+	}
+}
+
+	/*****Horizontal Slider Styling*****/
+	.slider-horizontal{
+		overflow-x: scroll;
+
+		.slider-container a{
+			display: inline-block;
+		}
+	}
+
+/*****Tab Content Styling*****/
+.tab-content{
+	display: none;
+
+	.card-body{
+		.card-text{
+			text-align: justify;
+		}
+	}
+
+	&:target{
+		display: grid;
+	}
+}
+
+/*****Header Styling*****/
+header{
+	display: flex;
+	align-items: center;
+	padding: 5px 5px;
+
+	#logo{
+		max-width: 80px;
+		max-height: 80px;
+		width: 100%;
+		height: 100%;
+		border-radius: 100%;
+		margin: 5px 5px;
+	}
+
+	#menu{
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+/*****Main Content Styling*****/
+main{
+	display: block;
+	overflow: auto;
+	min-height: 100%;
+
+	.container-fluid{
+		display: grid;
+		grid-template-columns: auto;
+
+		.content-container{
+			display: grid;
+			grid-gap: 10px;
+		}
+
+		#about-container{
+			.card{
+				display: grid;
+				text-align: justify;
+			}
+		}
+
+		#news-controls-container{
+			display: flex;
+
+			a{
+				color: blue;
+				text-decoration: none;
+
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+		}
+
+		.card-championship{
+			text-align: center;
+		}
+
+		.card-achievement{
+			display: grid;
+
+			.card-text{
+				text-align: justify;
+			}
+		}
+	}
+}
+
+/*****Footer Styling*****/
+footer{
+	display: flex;
+
+	#social-media-container{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		height: inherit;
+		font-size: 1.2em;
+	}
+}
+
+/**********************************************************************************************************************************Responsive Layout**********/
+
+/*******************************************************************************************************************Mobile Layout***************/
+@media only screen and (min-width: 320px) {
+
+	/*****Card Styling*****/
+	.card{
+		text-align: center;
+	}
+
+	/*****Accordion Styling*****/
+	#accordion{
+		.card-header{
+			.card-link{
+				text-align: center;
+			}
+		}
+	}
+
+	/*****Section Title Styling*****/
+	.section-title{
+		text-align: center;
+	}
+
+	/*****Header Styling*****/
+	header{
+		height: 100px;
+
+		#menu{
+			position: fixed;
+			bottom: 0%;
+			left: 0%;
+			z-index: 1;
+			width: 100%;
+			background-color: black;
+
+			a{
+				display: flex;
+				flex-direction: column;
+				color: white;
+				text-align: center;
+				margin: 0px 10px;
+			}
+		}
+	}
+
+	/*****Main Content Styling*****/
+	main{
+		padding-bottom: 70px;
+
+		.container-fluid{
+			.content-container{
+				grid-template-columns: auto;
+			}
+
+			#about-container{
+				.card{
+					grid-template-columns: auto;
+				}
+			}
+
+			#news-controls-container{
+				justify-content: center;
+				align-items: center;
+			}
+
+			.card-achievement{
+				grid-template-columns: auto;
+			}
+
+			.tab-content-rivalry{
+				grid-template-columns: auto;
+			}
+		}
+	}
+
+	/*****Footer Styling*****/
+	footer{
+		position: absolute;
+		top: 0%;
+		right: 0%;
+		height: 100px;
+
+		#social-media-container{
+			justify-content: center;
+
+			a{
+				margin: 0px 10px;
+			}
+		}
+	}
+
+}
+
+/*******************************************************************************************************************Tablet Layout***************/
+@media only screen and (min-width: 768px) {
+
+	/*****Card Styling*****/
+	.card{
+		text-align: center;
+	}
+
+	/*****Accordion Styling*****/
+	#accordion{
+		.card-header{
+			.card-link{
+				text-align: center;
+			}
+		}
+	}
+
+	/*****Section Title Styling*****/
+	.section-title{
+		text-align: center;
+	}
+
+	/*****Header Styling*****/
+	header{
+		height: 100px;
+
+		#menu{
+			position: fixed;
+			bottom: 0%;
+			left: 0%;
+			z-index: 1;
+			width: 100%;
+			background-color: black;
+
+			a{
+				display: flex;
+				flex-direction: column;
+				color: white;
+				text-align: center;
+				margin: 0px 10px;
+			}
+		}
+	}
+
+	/*****Main Content Styling*****/
+	main{
+		padding-bottom: 70px;
+
+		.container-fluid{
+			.content-container{
+				grid-template-columns: auto auto;
+			}
+
+			#about-container{
+				.card{
+					grid-template-columns: auto;
+				}
+			}
+
+			#news-controls-container{
+				justify-content: center;
+				align-items: center;
+			}
+
+			.card-achievement{
+				grid-template-columns: auto;
+			}
+
+			.tab-content-rivalry{
+				grid-template-columns: auto;
+			}
+		}
+	}
+
+	/*****Footer Styling*****/
+	footer{
+		position: absolute;
+		top: 0%;
+		right: 0%;
+		height: 100px;
+
+		#social-media-container{
+			justify-content: center;
+
+			a{
+				margin: 0px 10px;
+			}
+		}
+	}
+
+}
+
+/*******************************************************************************************Laptop, Desktop & Large Screen Layout***************/
+@media only screen and (min-width: 992px) {
+
+	/*****Card Styling*****/
+	.card{
+		text-align: left;
+	}
+
+	/*****Accordion Styling*****/
+	#accordion{
+		:nth-child(odd) .card-link{
+			text-align: left;
+		}
+		
+		:nth-child(even) .card-link{
+			text-align: right;
+		}
+	}
+
+	/*****Section Title Styling*****/
+	.section-title{
+		text-align: left;
+	}
+
+	/*****Header Styling*****/
+	header{
+		height: auto;
+		flex-direction: row;
+		justify-content: space-between;
+
+		#menu{
+			position: initial;
+			width: auto;
+			background-color: transparent;
+
+			a{
+				display: initial;
+				color: black;
+				margin: 0px 10px;
+
+				i{
+					display: none;
+				}
+			}
+		}
+	}
+
+	/*****Main Content Styling*****/
+	main{
+		padding-bottom: 0px;
+
+		.container-fluid{
+			.content-container{
+				grid-template-columns: auto auto auto;
+			}
+
+			#about-container{
+				.card{
+					grid-template-columns: auto auto;
+
+					img{
+						height: 100%;
+					}
+				}
+			}
+
+			#news-controls-container{
+				justify-content: flex-end;
+				align-items: center;
+			}
+
+			.card-achievement{
+				grid-template-columns: auto auto;
+
+					img{
+						width: 500px;
+						height: 100%;
+					}
+			}
+
+			.tab-content-rivalry{
+				grid-template-columns: auto auto;
+
+				img{
+					width: 500px;
+					height: 100%;
+				}
+			}
+		}
+	}
+
+	/*****Footer Styling*****/
+	footer{
+		position: initial;
+		clear: both;
+
+		#social-media-container{
+			justify-content: flex-end;
+		}
+	}
+
+}
